@@ -15,7 +15,7 @@ import Services from "./services";
 import FAQS from "./faq";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import Footer from "./Footer";
-// import Youtube from "./Youtube";
+
 
 export default function Home() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -81,7 +81,7 @@ export default function Home() {
           href={"https://calendly.com/kobbyboateng321/pearl-essence-ghana"}
           className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
         >
-          Book a call.
+          Book a call
         </Link>
 
         <div className="w-full pt-20">
@@ -108,8 +108,7 @@ export default function Home() {
       </div>
       {/* <Footer />*/}
     </div>
-   {/* <Youtube />*/}
-     <Footer />
+      <Footer />
       </div>
   );
 }
