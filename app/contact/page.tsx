@@ -45,16 +45,17 @@ const FormSchema = z.object({
   job_title: z.string(),
   company_name: z.string(),
   help: z.enum([
-    "Shop wholesale with us",
+    "Evaluate Bird for my company",
+    "Learn More",
     "Get a Quote",
     "Other",
   ]),
   services: z.enum([
-    "Eau de Toilette",
-    "Eau de Parfum",
-    "Perfume Oil",
-    "Cologne",
-    "Other",
+    "Mobile App Develoment",
+    "Social Media Marketing",
+    "UI/UX Design",
+    "Branding",
+    "Website Development",
   ]),
   info: z.string(),
 });
@@ -65,14 +66,14 @@ type FormValues = {
   email: string;
   job_title: string;
   company_name: string;
-  help: "Shop wholesale with us" | "Learn More" | "Get a Quote" | "Other";
+  help: "Evaluate Bird for my company" | "Learn More" | "Get a Quote" | "Other";
   services:
-    | "Eau de Parfum"
-    | "Perfume Oil"
-    | "Eau de Toilette"
-    | "Cologne"
-    | "Other";
-   info: string;
+    | "Mobile App Develoment"
+    | "Social Media Marketing"
+    | "UI/UX Design"
+    | "Branding"
+    | "Website Development";
+  info: string;
   terms: boolean;
 };
 
@@ -90,7 +91,7 @@ export default function ContactForm() {
       job_title: "",
       company_name: "",
       help: "Learn More",
-      services: "wholesale services",
+      services: "Mobile App Develoment",
       info: "",
     },
   });
@@ -140,7 +141,7 @@ export default function ContactForm() {
               text-gray-300
                     "
           >
-             Let&apos;s talk about your favorite scents and how we can assist you.
+            Let&apos;s talk about how Bird can help your team work better.
           </div>
 
           <div className="bg-[#f6f5f4] md:w-4/5 space-y-6 p-4 rounded-2xl my-4 hidden md:flex md:flex-col">
@@ -262,10 +263,10 @@ export default function ContactForm() {
                       <SelectContent>
                         <div className="flex gap-4">
                           <SelectItem value="Mobile App Develoment">
-                          Shop wholesale with us
+                          Mobile App Develoment
                           </SelectItem>
                         </div>
-                        <SelectItem value="Social Media Marketing">Get a quote</SelectItem>
+                        <SelectItem value="Social Media Marketing">Social Media Marketing</SelectItem>
                         <SelectItem value="51-200">51-200</SelectItem>
                         <SelectItem value="501-1000">501-1000</SelectItem>
                         <SelectItem value="1000+">1000+</SelectItem>
@@ -298,7 +299,7 @@ export default function ContactForm() {
                       <SelectContent>
                         <div className="flex gap-4">
                           <SelectItem value="Evaluate Bird for my company">
-                            Evaluate prices for my company
+                            Evaluate Bird for my company
                           </SelectItem>
                         </div>
                         <SelectItem value="Learn More">Learn More</SelectItem>
@@ -339,7 +340,8 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="text-xs font-light  md:w-3/4 mb-1 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                   I agree to receive marketing communications from this perfume store.
+                  I agree to Bird&apos; sending marketing communications related
+                  to bird
                 </div>
               </div>
 
@@ -392,266 +394,3 @@ export default function ContactForm() {
     </div>
   );
 }
-
-// "use client";
-
-// import { useState } from "react";
-// import { zodResolver } from "@hookform/resolvers/zod";
-// import { useForm } from "react-hook-form";
-// import * as z from "zod";
-// import { Checkbox } from "@/components/ui/checkbox";
-// import { Button } from "@/components/ui/button";
-// import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-// import { Input } from "@/components/ui/input";
-// import { useToast } from "@/components/ui/use-toast";
-// import Navbar from "@/components/navbar";
-
-// const FormSchema = z.object({
-//   first_name: z.string(),
-//   last_name: z.string(),
-//   email: z.string().email(),
-//   address: z.string(),
-//   city: z.string(),
-//   country: z.string(),
-//   phone: z.string(),
-//   perfume_type: z.enum([
-//     "Eau de Parfum",
-//     "Eau de Toilette",
-//     "Perfume Oil",
-//     "Cologne",
-//     "Other",
-//   ]),
-//   inquiry: z.string(),
-// });
-
-// type FormValues = {
-//   first_name: string;
-//   last_name: string;
-//   email: string;
-//   address: string;
-//   city: string;
-//   country: string;
-//   phone: string;
-//   perfume_type: "Eau de Parfum" | "Eau de Toilette" | "Perfume Oil" | "Cologne" | "Other";
-//   inquiry: string;
-//   terms: boolean;
-// };
-
-// export default function ContactForm() {
-//   const [loading, setLoading] = useState(false);
-//   const [submitted, setSubmitted] = useState(false);
-//   const { toast } = useToast();
-
-//   const form = useForm<FormValues>({
-//     resolver: zodResolver(FormSchema),
-//     defaultValues: {
-//       first_name: "",
-//       last_name: "",
-//       email: "",
-//       address: "",
-//       city: "",
-//       country: "",
-//       phone: "",
-//       perfume_type: "Eau de Parfum",
-//       inquiry: "",
-//     },
-//   });
-
-//   async function onSubmit(data: z.infer<typeof FormSchema>) {
-//     try {
-//       setLoading(true);
-//       const res = await fetch("/api/contact", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(data),
-//       });
-
-//       if (!res.ok) {
-//         throw new Error("Something went wrong");
-//       }
-
-//       setSubmitted(true);
-//     } catch (error) {
-//       toast({
-//         title: "Error",
-//         description: "Something went wrong",
-//       });
-//     } finally {
-//       setLoading(false);
-//     }
-//   }
-
-//   return (
-//     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-//       <Navbar
-//         scrollToPerfumeType={() => {}}
-//         scrollToNewArrivals={() => {}}
-//         scrollToBestSellers={() => {}}
-//         scrollToContact={() => {}}
-//       />
-//       <div className="md:flex items-start justify-center md:py-20 px-6">
-//         <div className="">
-//           <div className="text-5xl font-medium w-full md:w-2/3 pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-//             Contact our Perfume Experts
-//           </div>
-//           <div className="py-4 text-gray-300">
-//             Let&apos;s talk about your favorite scents and how we can assist you.
-//           </div>
-//         </div>
-
-//         <Form {...form}>
-//           {!submitted ? (
-//             <form
-//               onSubmit={form.handleSubmit(onSubmit)}
-//               className="space-y-4 h-full border rounded-3xl p-10 md:w-1/3"
-//             >
-//               <FormField
-//                 control={form.control}
-//                 name="first_name"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>First Name *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="last_name"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>Last Name *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="email"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>Email *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="address"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>Address *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="city"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>City *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="country"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>Country *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="phone"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>Phone *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="perfume_type"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>Perfume Type *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <FormField
-//                 control={form.control}
-//                 name="inquiry"
-//                 render={({ field }) => (
-//                   <FormItem className="w-full">
-//                     <FormLabel>Inquiry *</FormLabel>
-//                     <FormControl>
-//                       <Input {...field} />
-//                     </FormControl>
-//                   </FormItem>
-//                 )}
-//               />
-
-//               <div className="flex items-center gap-4">
-//                 <div>
-//                   <Checkbox />
-//                 </div>
-//                 <div className="text-xs font-light md:w-3/4 mb-1">
-//                   I agree to receive marketing communications from the perfume store.
-//                 </div>
-//               </div>
-
-//               <div className="flex items-center gap-4">
-//                 <Button
-//                   type="submit"
-//                   disabled={loading}
-//                   onClick={() => form.handleSubmit(onSubmit)}
-//                 >
-//                   Submit
-//                 </Button>
-//               </div>
-//             </form>
-//           ) : (
-//             <>
-//               <div className="text-xl md:text-2xl flex items-center justify-center flex-col px-8">
-//                 <div className="w-80 py-20">
-//                   <div>We&apos;ve received your inquiry and will be contacting you via email shortly.</div>
-//                 </div>
-//               </div>
-//             </>
-//           )}
-//         </Form>
-//       </div>
-//     </div>
-//   );
-// }
