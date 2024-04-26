@@ -65,7 +65,7 @@ const Navbar = ({
           <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
             Services
           </div>
-          <div onClick={scrollToBrands} className="hover:text-gray-50">
+        <div onClick={scrollToBrands} className="hover:text-gray-50">
             Testimonials
           </div>
 
@@ -116,3 +116,5 @@ const Navbar = ({
 };
 
 export default Navbar;
+
+

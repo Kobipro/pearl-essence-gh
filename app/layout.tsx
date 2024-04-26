@@ -14,6 +14,9 @@ const font = Poppins(
 export const metadata: Metadata = {
   title: "Pearl Essence Ghana",
   description: "Pearl Essence Ghana",
+  // icon:{
+  //   "../public/logo/perfume-shop.png"
+  // },
 };
 
 export default function RootLayout({
