@@ -4,19 +4,19 @@ import Image from "next/image";
 
 const stores = [
   {
-    image: "/images/image2.png",
+    image: "/images/delivery3.png",
     quote: "Get your ordered perfumes as soon as possible when you order with us.",
     name: "Delivery Rider",
   },
   {
-    image: "/images/shop-2.jpeg",
+    image: "/images/delivery2.png",
     quote:
       "Get exactly what you ordered for when you order with us.",
     name: "Sales Represntative",
   },
 
   {
-    image: "/images/s-2.webp",
+    image: "/images/ceo.png",
     quote:
       "Join the Big Ghanaian Family.",
     name: "Cynthia Boateng,CEO ",

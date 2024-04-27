@@ -104,10 +104,8 @@ export default function Home() {
         </div>
         <InfiniteMovingCardsDemo />
         <FAQS />
-       {/* <Footer />*/}
+        </div>
       </div>
-      {/* <Footer />*/}
-    </div>
       <Footer />
       </div>
   );
