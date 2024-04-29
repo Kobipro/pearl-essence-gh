@@ -15,17 +15,16 @@ const FAQS = () => {
         <div className="font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-emerald-600 to-blue-300 bg-clip-text text-transparent">
           Get answers.
         </div>
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Who owns Pearl Essence Ghana?</AccordionTrigger>
-            <AccordionContent>
-              Pearl Essence Ghana is proudly owned by Pearl Awurakua Duah ! Her passion, dedication,
-               and vision have been the driving force behind the brand's success.
-                With her at the helm, Pearl Essence Ghana embodies creativity, authenticity, and 
-                excellence, reflecting her unique touch and commitment to quality.
-              Read more about our CEO here.{/*<a href="#" style="color: blue;"> here.</a>*/}
-            </AccordionContent>
-          </AccordionItem>
+        <AccordionItem value="item-1">
+  <AccordionTrigger>Who owns Pearl Essence Ghana?</AccordionTrigger>
+  <AccordionContent>
+    Pearl Essence Ghana is proudly owned by Pearl Awurakua Duah! Her passion, dedication,
+    and vision have been the driving force behind the brand&apos;s success.
+    With her at the helm, Pearl Essence Ghana embodies creativity, authenticity, and 
+    excellence, reflecting her unique touch and commitment to quality.
+    Read more about our CEO here.
+  </AccordionContent>
+</AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>Are the perfumes you sell authentic?</AccordionTrigger>
             <AccordionContent>
