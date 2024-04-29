@@ -37,7 +37,7 @@ const FAQS = () => {
           <AccordionItem value="item-4">
             <AccordionTrigger>Do we offer Support?</AccordionTrigger>
             <AccordionContent>
-              We offer Monday-Friday support for all our clients.
+              We offer Monday-Friday support for all our clients...
             </AccordionContent>
           </AccordionItem>
         </Accordion>
