@@ -10,7 +10,7 @@ const WebsiteDesign = () => {
      Collections <br /> that rocks
       </div>
       <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
-    Discover our diverse range of scents, perfect for any occasion. Whether it's a day at the gym, 
+    Discover our diverse range of scents, perfect for any occasion. Whether its a day at the gym, 
     a serene moment at church, the hustle of school, 
     or the professionalism of the office, our fragrances complement every facet of your life.
         </p>
