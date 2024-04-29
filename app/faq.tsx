@@ -19,9 +19,11 @@ const FAQS = () => {
           <AccordionItem value="item-1">
             <AccordionTrigger>Who owns Pearl Essence Ghana?</AccordionTrigger>
             <AccordionContent>
-              The visionary behind our business is Emily Parker. With a keen eye for beauty and a passion for perfumery, 
-              Emily brings her expertise and creativity to curate a collection of exquisite fragrances that captivate the senses.
-              Read more about our CEO here.
+              Pearl Essence Ghana is proudly owned by Pearl Awurakua Duah ! Her passion, dedication,
+               and vision have been the driving force behind the brand's success.
+                With her at the helm, Pearl Essence Ghana embodies creativity, authenticity, and 
+                excellence, reflecting her unique touch and commitment to quality.
+              Read more about our CEO here.{/*<a href="#" style="color: blue;"> here.</a>*/}
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
@@ -58,7 +60,7 @@ const FAQS = () => {
 export default FAQS;
 
 
-
+ 
 
 // import {
 //     Accordion,

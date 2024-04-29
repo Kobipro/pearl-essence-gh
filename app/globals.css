@@ -74,3 +74,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/*.main {
+    @apply flex items-center justify-center flex-col py-24 h-screen;
+}
+
+.contents h1 {
+    @apply uppercase text-white tracking-widest font-semibold py-8 text-2xl;
+}
+
+.buttons {
+    @apply flex items-center justify-center;
+}
+
+.buttons button {
+    @apply px-8 py-6 mx-4 border border-white text-white uppercase tracking-wider transition duration-250 ease-in-out;
+}
+
+.buttons button:hover {
+    @apply bg-white text-black;
+}
+
+.video {
+    @apply absolute z-0 h-full w-full object-cover;
+}*/

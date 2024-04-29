@@ -58,7 +58,7 @@ const WebsiteDesign = () => {
             width={500}
             height={500}
             priority
-            className="h-auto max-w-full rounded-lg" src="/images/perfume9.webp" alt=""/>
+            className="h-auto max-w-full rounded-lg" src="/images/perfume10.jpg" alt=""/>
         </div>
     </div>
     <div className="grid gap-4">
@@ -81,7 +81,7 @@ const WebsiteDesign = () => {
             width={500}
             height={500}
             priority
-            className="h-auto max-w-full rounded-lg" src="/images/perfume9.webp" alt=""/>
+            className="h-auto max-w-full rounded-lg" src="/images/perfume10.jpg" alt=""/>
         </div>
     </div>
     <div className="grid gap-4">

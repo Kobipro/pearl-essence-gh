@@ -15,6 +15,7 @@ import Services from "./services";
 import FAQS from "./faq";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import Footer from "./Footer";
+import VideoPlayer from "../components/VideoPlayer"
 
 
 export default function Home() {
@@ -74,7 +75,7 @@ export default function Home() {
           Discover, cultivate, and  <br /> expand your fragrance empire.
         </div>
         <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
-        Tailored solutions for your perfume venture. Our creative team is here to fuel your growth, keeping prices light.
+       At Pearl Essence, we offer tailored solutions for your perfume venture,while keeping prices light
         </p>
 
         <Link
@@ -106,7 +107,8 @@ export default function Home() {
         <FAQS />
         </div>
       </div>
-      <Footer />
+       <VideoPlayer />
+         <Footer />
       </div>
   );
 }

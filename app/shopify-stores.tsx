@@ -5,21 +5,21 @@ import Image from "next/image";
 const stores = [
   {
     image: "/images/delivery3.png",
-    quote: "Get your ordered perfumes as soon as possible when you order with us.",
+    quote: "Get your ordered perfumes as soon as possible when you order with us - Mubarak.",
     name: "Delivery Rider",
   },
   {
     image: "/images/delivery2.png",
     quote:
-      "Get exactly what you ordered for when you order with us.",
-    name: "Sales Represntative",
+      "Get exactly what you ordered for when you order with us- Cynthia Agyeinim.",
+    name: "Sales Representative",
   },
 
   {
     image: "/images/ceo.png",
     quote:
       "Join the Big Ghanaian Family.",
-    name: "Cynthia Boateng,CEO ",
+    name: "Pearl Awurakua Duah,CEO ",
   },
 ];
 
