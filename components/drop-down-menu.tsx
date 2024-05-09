@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FiArrowUpRight } from 'react-icons/fi';
 
 interface DropDownMenuProps {
   onClose: () => void;
@@ -33,20 +34,38 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose, scrollToServices }
     >
       <div className="flex-col flex space-y-10">
         <Link href="https://pearlessencegh.com/" className="text-black text-2xl">
-           Main Store
+           Main Store<span className="ml-2">
+    <FiArrowUpRight className="kink-icon" />
+        </span>
+
         </Link>
-        <Link href="mailto:boatengkwabenaakuamoah@example.com" className="text-black text-2xl">
-          Contact
+        <Link href={"https://pearlessencegh.com/?product_tag=affordable&filter=1"} className="text-black text-2xl">
+          Affordables
         </Link>
 
-        <Link href="https://calendly.com/kobbyboateng321/pearl-essence-ghana" className="text-black text-2xl">
-          Book a call
+        <Link href={"https://pearlessencegh.com/?product_tag=discount&filter=1"} className="text-black text-2xl">
+          Discounts
         </Link>
+        <Link href={"https://pearlessencegh.com/?product_tag=travel-size&filter=1"} className="text-black text-2xl">
+          Travel size
+        </Link>
+        <Link href={"https://pearlessencegh.com/?product_tag=body-cream&filter=1"} className="text-black text-2xl">
+          Body creams
+        </Link>
+         <Link href={"https://pearlessencegh.com/?product_tag=perfume-oils&filter=1"} className="text-black text-2xl">
+          Perfume oil
+        </Link>
+         <Link href={"https://pearlessencegh.com/?product_tag=cosmetics&filter=1"} className="text-black text-2xl">
+          Cosmetics
+        </Link>
+       {/* <div onClick={scrollToTestimonials} className="text-black text-2xl">
+          Testimonials
+        </div>
 
-        {/* Add onClick handler to Services link */}
-        <Link href='/#services'  className="cursor-pointer text-black text-2xl">
+         Add onClick handler to Services link 
+        <div onClick={scrollToServices}   className=" text-black text-2xl">
           Services
-        </Link>
+        </div>*/}
       </div>
     </motion.div>
   );

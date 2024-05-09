@@ -15,6 +15,10 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        // thumbnail
+         sm: '100%',
+         md: '100%',
+         lg: '672px'
       },
     },
     extend: {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
-// import { TiSocialTiktok } from 'react-icons/ti';
+
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
         <a href="https://www.facebook.com/pearlessencegh" className="mr-4"><FaFacebook size={32} /></a>
         <a href="https://x.com/PearlEssenceGH?t=p5KymYwte9Jhec7yqfs-Dg&s=09" className="mr-4"><FaTwitter size={32} /></a>
         <a href="https://instagram.com/pearlessencegh" className="mr-4"><FaInstagram size={32} /></a>
-        <a href="https://www.linkedin.com" className="mr-4"><FaTiktok size={32} /></a>
+        <a href="https://www.tiktok.com/@pearlessencegh?is_from_webapp=1&sender_device=pc" className="mr-4"><FaTiktok size={32} /></a>
         <a href="https://youtube.com/@PearlEssenceGh?si=_SmUeABKEYUd_WCE"><FaYoutube size={32} /></a>
       </div>
       <p className="text-xl mb-4">Pearl Essence Ghana</p>

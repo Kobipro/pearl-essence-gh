@@ -6,6 +6,7 @@ import SliderOne from "@/components/ui/slider";
 import { Spotlight } from "@/components/ui/spotlight";
 import Image from "next/image";
 import Link from "next/link";
+import { FiArrowUpRight } from 'react-icons/fi';
 
 import WebsiteDesign from "./website-design";
 import GraphicDesign from "./graphic-design";
@@ -16,6 +17,7 @@ import FAQS from "./faq";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import Footer from "./Footer";
 import VideoPlayer from "../components/VideoPlayer"
+import WhatsAppIcon from "./whatsappicon"
 
 
 export default function Home() {
@@ -27,13 +29,15 @@ export default function Home() {
     setDropdownVisible(false);
   };
 
-  const websiteDesignRef = useRef<HTMLDivElement>(null);
+const websiteDesignRef = useRef<HTMLDivElement>(null);
   const graphicDesignRef = useRef<HTMLDivElement>(null);
   const shopifyStoresRef = useRef<HTMLDivElement>(null);
   const brandsRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
+  const faqsRef = useRef<HTMLDivElement>(null);
 
-  const scrollToWebsiteDesign = () => {
+   const scrollToWebsiteDesign = () => {
     websiteDesignRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -58,16 +62,28 @@ export default function Home() {
     servicesRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+const scrollToTestimonials = () => {
+    testimonialsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToFaqs = () => {
+    faqsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
      <div >
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Navbar
-        scrollToWebsiteDesign={scrollToWebsiteDesign}
-        scrollToGraphicDesign={scrollToGraphicDesign}
-        scrollToShopifyStores={scrollToShopifyStores}
-        scrollToBrands={scrollToBrands}
-        scrollToServices={scrollToServices}
-      />
+    <Navbar
+  scrollToWebsiteDesign={scrollToWebsiteDesign}
+  scrollToGraphicDesign={scrollToGraphicDesign}
+  scrollToShopifyStores={scrollToShopifyStores}
+  scrollToBrands={scrollToBrands}
+  scrollToServices={scrollToServices}
+  scrollToTestimonials={scrollToTestimonials} 
+  scrollToFaqs={scrollToFaqs} 
+ />
+
 
       <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
@@ -79,10 +95,14 @@ export default function Home() {
         </p>
 
         <Link
-          href={"https://calendly.com/kobbyboateng321/pearl-essence-ghana"}
+          href={"https://pearlessencegh.com/"}
           className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
         >
-          Book a call
+          Visit main store
+         <span className="ml-2">
+    <FiArrowUpRight className="kink-icon" />
+        </span>
+
         </Link>
 
         <div className="w-full pt-20">
@@ -91,6 +111,12 @@ export default function Home() {
         <div ref={websiteDesignRef}>
           <WebsiteDesign />
         </div>
+       {/* here*/}
+       </div>
+      </div>
+      <VideoPlayer />
+       <div >
+     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
         <div ref={graphicDesignRef}>
           <GraphicDesign />
         </div>
@@ -100,15 +126,19 @@ export default function Home() {
         <div ref={brandsRef}>
           <Brands />
         </div>
-        <div id ='services'>
+        <div ref={servicesRef}>
         <Services />
         </div>
+        <div ref={testimonialsRef}>
         <InfiniteMovingCardsDemo />
-        <FAQS />
+        </div>
+        <div ref={faqsRef}>
+        <FAQS  />
+        </div>
         </div>
       </div>
-       <VideoPlayer />
-         <Footer />
+       <Footer />
+      <WhatsAppIcon link="https://wa.me/233272696206" />
       </div>
   );
 }

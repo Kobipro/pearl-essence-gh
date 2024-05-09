@@ -1,9 +1,9 @@
 
 import { Analytics } from '@vercel/analytics/react';
-import Head from 'next/head'; // Import Head component
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+
 
 
 const font = Poppins(
@@ -15,6 +15,9 @@ const font = Poppins(
 export const metadata: Metadata = {
   title: "Pearl Essence - Exquisite Perfume Shop in Ghana",
   description: "Discover luxury fragrances at Pearl Essence, the premier perfume boutique in Ghana. Explore our curated collection of scents from around the world. Visit us today!",
+  icons: {
+    icon: '/logo/perfume-bottle.png'
+  }
 };
 
 
@@ -25,10 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <Head>
-        <link rel="shortcut icon" href="../public/images/perfume-shop.png" /> {/* Include favicon */}
-      </Head>
-      <body 
+     <body 
       
       suppressHydrationWarning={true}
       className={font.className}>

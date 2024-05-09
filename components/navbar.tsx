@@ -7,12 +7,15 @@ import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
 
+
 interface NavbarProps {
   scrollToWebsiteDesign: () => void;
   scrollToGraphicDesign: () => void;
   scrollToShopifyStores: () => void;
   scrollToBrands: () => void;
   scrollToServices: () => void; // Define scrollToServices function
+  scrollToTestimonials: () => void; // Add scrollToTestimonials function
+  scrollToFaqs: () => void;
 }
 
 const Navbar = ({
@@ -21,6 +24,8 @@ const Navbar = ({
   scrollToShopifyStores,
   scrollToBrands,
   scrollToServices, // Add scrollToServices to props
+  scrollToTestimonials,
+  scrollToFaqs, // Receive scrollToTestimonials function
 }: NavbarProps) => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
@@ -39,7 +44,7 @@ const Navbar = ({
           <Link className="cursor-pointer" href="/">
             <Image
               priority
-              src="/logo/logo.svg"
+              src="/logo/perfumed-bottle.png"
               alt="Logo"
               width={100}
               height={100}
@@ -55,24 +60,30 @@ const Navbar = ({
              bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50"
         >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
+          {/*<div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
             Products
           </div>
           <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
             Blog
-          </div>
+          </div>*/}
 
-          <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
+          <div onClick={scrollToServices} className="hover:text-gray-50">
             Services
           </div>
-        <div onClick={scrollToBrands} className="hover:text-gray-50">
+        <div onClick={scrollToTestimonials} className="hover:text-gray-50">
             Testimonials
           </div>
 
-          <Link href="https://pearlessencegh.com/" className="hover:text-gray-50">
-            Main Store
+         <div onClick={scrollToFaqs} className="hover:text-gray-50">
+            FAQs
+          </div>
+          <Link href={"https://pearlessencegh.com/?product_tag=cosmetics&filter=1"} className="hover:text-gray-50">
+            Cosmetics
           </Link>
-        </div>
+          <Link  href={"https://pearlessencegh.com/?product_tag=perfume-oils&filter=1"} className="hover:text-gray-50">
+            Perfume oils
+          </Link>
+           </div>
 
         <div className="flex md:hidden">
           {isDropDownVisible ? (
@@ -97,7 +108,7 @@ const Navbar = ({
 
         <div className="hidden md:flex">
           <Link
-            href="mailto:boatengkwabenaakuamoah@example.com"
+            href="mailto:Biz@pearlessencegh.com "
             className="
             inline-flex h-12 animate-shimmer items-center justify-center 
             rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
@@ -107,7 +118,7 @@ const Navbar = ({
 
             "
           >
-            Contact
+            Email us
           </Link>
         </div>
       </div>
@@ -116,5 +127,4 @@ const Navbar = ({
 };
 
 export default Navbar;
-
 
