@@ -57,7 +57,7 @@ const WebsiteDesign = () => {
         </div>
        </div>
      </div>
-     <div className="flex justify-center mb-8">
+     <div className="flex justify-center mb-6">
         <Link
             href={"https://pearlessencegh.com/?product_tag=unisex-perfume&filter=1"}
             className="bg-white text-black px-8 py-4 rounded-lg transition duration-300 ease-in-out hover:bg-gray-300 hover:text-gray-800 flex items-center"

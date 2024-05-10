@@ -5,8 +5,25 @@
     justify-content: center;
     align-items: center;
     padding: 6rem;
-    height: 100vh;
+    height: 60vh;
+   margin-top: 70px; /* Add margin-top here */
 }
+
+/* Adjust margin-top for smaller screens */
+@media screen and (max-width: 768px) {
+    .main {
+        margin-top: 140px; /* Reduced margin-top for smaller screens */
+    }
+}
+
+/* Adjust margin-top for iPads */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .main {
+        margin-top: 250px; /* Adjust margin-top for iPads */
+    }
+}
+
+
 
 .contents h1 {
     text-transform: uppercase;
@@ -44,7 +61,7 @@
 
 .video {
     position: absolute;
-    z-index: -1;
+   /* z-index: -1;*/
     height: 100%;
     width: 100%;
     object-fit: cover;
